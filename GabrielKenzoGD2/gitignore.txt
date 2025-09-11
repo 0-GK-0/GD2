@@ -1,0 +1,73 @@
+# Unity generated folders
+[Ll]ibrary/
+[Tt]emp/
+[Oo]bj/
+[Bb]uild/
+[Bb]uilds/
+[Ll]ogs/
+[Mm]emoryCaptures/
+
+# Asset meta data should only be ignored when the corresponding asset is also ignored
+#*.meta
+
+# Uncomment this line if you wish to ignore the asset store tools plugin
+#Assets/AssetStoreTools*
+
+# Visual Studio / JetBrains Rider
+.vs/
+.vscode/
+*.csproj
+*.unityproj
+*.sln
+*.suo
+*.tmp
+*.user
+*.userprefs
+
+# OS generated files
+.DS_Store
+*.swp
+*.iml
+*.idea/
+Thumbs.db
+ehthumbs.db
+Desktop.ini
+
+# Unity Crash and Debug logs
+sysinfo.txt
+*.stacktrace
+
+# Builds
+*.apk
+*.aab
+*.unitypackage
+
+# Auto-generated JSON files by Unity
+*.pidb
+*.booproj
+
+# Rider project settings
+.idea/
+*.sln.iml
+
+# Addressables
+Assets/AddressableAssetsData/*/*.bin*
+Assets/AddressableAssetsData/*/*.json
+Assets/AddressableAssetsData/*/*.hash
+Assets/AddressableAssetsData/*/*.bundle
+Assets/AddressableAssetsData/*/*.catalog
+Assets/StreamingAssets/aa/
+
+# Collab
+.collab/
+
+# PlasticSCM
+.plastic/
+ignore.conf
+selector.conf
+
+# Burst Compiler cache
+*.burstlog
+
+# Unity Cache
+UnityCache/
