@@ -9,6 +9,8 @@ public class FPMov : MonoBehaviour
     float horizontal;
     float vertical;
 
+    public Inventory inventory;
+
     private void Update()
     {
         horizontal = Input.GetAxis("Horizontal");
