@@ -8,5 +8,6 @@ public class Item : MonoBehaviour
     public void Collect()
     {
         inventory.AddItem(itemObj);
+        Destroy(gameObject);
     }
 }
