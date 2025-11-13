@@ -30,7 +30,6 @@ public class DoorInt : MonoBehaviour
             }
             animCoroutine = StartCoroutine(DoRotOpen());
             StartCoroutine(PlaySound());
-
         }
     }
 
