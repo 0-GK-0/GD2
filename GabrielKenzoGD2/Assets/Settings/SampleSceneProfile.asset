@@ -62,13 +62,13 @@ MonoBehaviour:
   active: 1
   shadows:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.91189426}
+    m_Value: {x: 0.91500324, y: 0.9303241, z: 1, w: -0.73502344}
   midtones:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.9779736}
+    m_Value: {x: 0.99346185, y: 0.9971052, z: 1, w: -0.92355204}
   highlights:
     m_OverrideState: 1
-    m_Value: {x: 1, y: 1, z: 1, w: -0.94713664}
+    m_Value: {x: 1, y: 0.99935144, z: 0.9894573, w: -0.90632033}
   shadowsStart:
     m_OverrideState: 1
     m_Value: 0
@@ -96,10 +96,10 @@ MonoBehaviour:
   active: 1
   type:
     m_OverrideState: 1
-    m_Value: 8
+    m_Value: 5
   intensity:
     m_OverrideState: 1
-    m_Value: 1
+    m_Value: 0.667
   response:
     m_OverrideState: 1
     m_Value: 0.8
@@ -127,7 +127,7 @@ MonoBehaviour:
     m_Value: {x: 0.5, y: 0.5}
   intensity:
     m_OverrideState: 1
-    m_Value: 0.343
+    m_Value: 0.179
   smoothness:
     m_OverrideState: 1
     m_Value: 1
@@ -153,6 +153,7 @@ MonoBehaviour:
   - {fileID: -3357603926938260329}
   - {fileID: -6125742963128689975}
   - {fileID: -5535836843800517389}
+  - {fileID: 7036293557346593122}
 --- !u!114 &849379129802519247
 MonoBehaviour:
   m_ObjectHideFlags: 3
@@ -193,6 +194,28 @@ MonoBehaviour:
   maxNits:
     m_OverrideState: 1
     m_Value: 647
+--- !u!114 &7036293557346593122
+MonoBehaviour:
+  m_ObjectHideFlags: 3
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 0}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 5485954d14dfb9a4c8ead8edb0ded5b1, type: 3}
+  m_Name: LiftGammaGain
+  m_EditorClassIdentifier: 
+  active: 1
+  lift:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.033424605}
+  gamma:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: -0.27620742}
+  gain:
+    m_OverrideState: 1
+    m_Value: {x: 1, y: 1, z: 1, w: 1}
 --- !u!114 &7391319092446245454
 MonoBehaviour:
   m_ObjectHideFlags: 3
