@@ -52,6 +52,9 @@ public class Move : MonoBehaviour
         _characterController = GetComponent<CharacterController>();
         _targetHeight = standingHeight;
     }
+    private void Start(){
+        Cursor.lockState = CursorLockMode.Locked;
+    }
 
 
     private void OnEnable()

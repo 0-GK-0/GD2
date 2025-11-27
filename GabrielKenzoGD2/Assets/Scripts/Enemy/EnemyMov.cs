@@ -8,10 +8,12 @@ public class EnemyMov : MonoBehaviour
     public float runSpeed;
     public float speed;
     public float rotSpeed;
-    public float detectionRange;
     public float minDist = 1.5f;
     public Transform playerPos;
-    public Rigidbody rb;
+
+    [SerializeField] private GameObject jumpscare;
+    [SerializeField] private Move move;
+    [SerializeField] private GameObject cam;
 
     private void Start()
     {
@@ -20,25 +22,21 @@ public class EnemyMov : MonoBehaviour
     }
     private void Update()
     {
-        if (playerPos == null)
-        {
-            speed = wanderSpeed;
-        }
-        else
-        {
-            Vector3 direction = playerPos.position - transform.position;
-            float distance = direction.magnitude;
-            Quaternion rot = Quaternion.LookRotation(direction).normalized;
-            speed = runSpeed;
-            if (distance < detectionRange)
-            {
-                transform.rotation = Quaternion.Slerp(transform.rotation, rot, rotSpeed);
-                if (distance > minDist) transform.position += transform.forward * speed * Time.deltaTime;
-            }
-        }
+        Vector3 direction = playerPos.position - transform.position;
+        float distance = direction.magnitude;
+        Quaternion rot = Quaternion.LookRotation(direction).normalized;
+        speed = runSpeed;
+        transform.rotation = Quaternion.Slerp(transform.rotation, rot, rotSpeed);
+        if (distance > minDist) transform.position += transform.forward * speed * Time.deltaTime;
     }
-    private void OnDrawGizmos()
-    {
-        Gizmos.DrawSphere(transform.position, detectionRange);
+    private void OnTriggerEnter(Collider other){
+        if(other.gameObject.CompareTag("Player")){
+            jumpscare.SetActive(true);
+            move.walkSpeed = 0;
+            move.sprintSpeed = 0;
+            move.crouchSpeed = 0;
+            cam.SetActive(false);
+            Destroy(gameObject);
+        }
     }
 }
