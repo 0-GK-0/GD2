@@ -8,7 +8,7 @@ public class Jumpscare : MonoBehaviour
     private void Update(){
         if(time>0) time -= Time.deltaTime;
         else{
-            SceneManager.LoadScene("MainMenu");
+            SceneManager.LoadScene("SampleScene2");
         }
     }
 }
