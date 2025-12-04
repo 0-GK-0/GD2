@@ -14,6 +14,7 @@ public class EnemyMov : MonoBehaviour
     [SerializeField] private GameObject jumpscare;
     [SerializeField] private Move move;
     [SerializeField] private GameObject cam;
+    [SerializeField] private Material ghostMat;
 
     private void Start()
     {
@@ -37,6 +38,14 @@ public class EnemyMov : MonoBehaviour
             move.crouchSpeed = 0;
             cam.SetActive(false);
             Destroy(gameObject);
+        }
+        else if (other.gameObject.CompareTag("Wall"))
+        {
+            Renderer renderer = other.GetComponent<Renderer>();
+            if(renderer != null)
+            {
+                renderer.material = ghostMat;
+            }
         }
     }
 }
